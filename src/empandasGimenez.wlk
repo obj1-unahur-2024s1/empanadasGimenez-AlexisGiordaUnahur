@@ -1,6 +1,7 @@
 object gimenez{
 	var fondoDeSueldos = 3000000
 	
+	method fondoDeSueldos() = fondoDeSueldos
 	method pagarA(empleado){
 		fondoDeSueldos -= empleado.sueldo()
 		empleado.cobrarSueldo()
@@ -15,7 +16,7 @@ object galvan {
 	method sueldo() = sueldo
 	method totalDeuda() = deuda
 	method totalDinero() = totalDinero
-	method setSueldo(nuevoSueldo){
+	method sueldo(nuevoSueldo){
 		sueldo = nuevoSueldo
 	}
 	method cobrarSueldo(){
@@ -38,16 +39,16 @@ object galvan {
 
 object baigorria{
 	var empanadasVendidas = 0
-	var sueldo = empanadasVendidas * valorEmpanada
 	var valorEmpanada = 150
+	var sueldo = empanadasVendidas * valorEmpanada
 	var totalCobrado = 0
 	
 	method empanadasVendidas() = empanadasVendidas
 	method sueldo() = sueldo
-	method setEmpanadasVendidas(n){
-		empanadasVendidas = n
+	method venderEmpanadas(numVentas){
+		empanadasVendidas += numVentas
 	}
-	method setValorEmpanada(nuevoPrecio){
+	method valorEmpanada(nuevoPrecio){
 		valorEmpanada = nuevoPrecio
 	}
 	method cobrarSueldo(){
